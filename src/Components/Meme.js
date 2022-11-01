@@ -45,6 +45,10 @@ export default function Meme() {
     });
   }
 
+  // const style = {
+  //   backgroundImage: "url(" + meme.randomImage + ")",
+  // };
+
   return (
     <main>
       <div className="form">
@@ -68,10 +72,12 @@ export default function Meme() {
           Get new meme!
         </button>
       </div>
-      <div className="meme-container">
-        <h2 className="meme-text top">{meme.topText}</h2>
-        <h2 className="meme-text bottom">{meme.bottomText}</h2>
-        <img src={meme.randomImage} className="meme-image" />
+      <div className="meme-flex">
+        <div className="meme-container">
+          <h2 className="meme-text top">{meme.topText}</h2>
+          <h2 className="meme-text bottom">{meme.bottomText}</h2>
+          <img src={meme.randomImage} className="meme-image" />
+        </div>
       </div>
     </main>
   );

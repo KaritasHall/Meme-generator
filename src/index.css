@@ -5,6 +5,7 @@
 body {
   font-family: "Karla", sans-serif;
   margin: 0;
+  background-color: #000;
 }
 
 main {
@@ -12,29 +13,20 @@ main {
   justify-content: center;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  height: 65px;
-  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
-  color: white;
-  padding: 20px;
-}
-
 .title {
-  font-size: 1.25rem;
+  font-size: 24px;
   margin-right: auto;
 }
 
 .author {
-  font-size: 0.75rem;
+  font-size: 16px;
   font-weight: 500;
 }
 
 .form {
   display: grid;
   grid-template: 40px 40px / 1fr 1fr;
-  gap: 17px;
+  gap: 50px;
   margin-bottom: 40px;
 }
 
@@ -43,6 +35,7 @@ main {
   border-radius: 5px;
   border: 1px solid #d5d4d8;
   text-indent: 5px;
+  /* padding-bottom: 20px; */
 }
 
 .form-button {
@@ -54,23 +47,33 @@ main {
   border: none;
   cursor: pointer;
   width: 50%;
+  justify-self: center;
 }
 
 .meme-image {
   max-width: 100%;
   border-radius: 3px;
   width: 50vw;
+  /* position: relative; */
+  /* position: absolute; */
 }
 
 .meme-container {
-  position: absolute;
+  position: relative;
   width: 80%;
   display: flex;
   justify-content: center;
   margin-bottom: 60px;
   height: auto;
-  outline: solid 4px blue;
-  /* padding-bottom: 60px; */
+}
+
+.meme-text-container {
+  position: absolute;
+}
+
+.meme-flex {
+  display: flex;
+  justify-content: center;
 }
 
 .meme-text {
