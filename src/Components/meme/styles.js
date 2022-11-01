@@ -1,44 +1,25 @@
-* {
-  box-sizing: border-box;
-}
+import styled from "styled-components";
 
-body {
-  font-family: "Karla", sans-serif;
-  margin: 0;
-  background-color: #000;
-}
-
-main {
+export const Main = styled.main`
   padding: 60px;
   justify-content: center;
-}
+`;
 
-.title {
-  font-size: 24px;
-  margin-right: auto;
-}
-
-.author {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.form {
+export const Form = styled.div`
   display: grid;
   grid-template: 40px 40px / 1fr 1fr;
   gap: 50px;
   margin-bottom: 40px;
-}
+`;
 
-.form-input {
+export const FormInput = styled.input`
   font-family: "Karla", sans-serif;
   border-radius: 5px;
   border: 1px solid #d5d4d8;
   text-indent: 5px;
-  /* padding-bottom: 20px; */
-}
+`;
 
-.form-button {
+export const FormButton = styled.button`
   grid-column: 1 / -1;
   font-family: "Karla", sans-serif;
   border-radius: 5px;
@@ -48,35 +29,23 @@ main {
   cursor: pointer;
   width: 50%;
   justify-self: center;
-}
+`;
 
-.meme-image {
-  max-width: 100%;
-  border-radius: 3px;
-  width: 50vw;
-  /* position: relative; */
-  /* position: absolute; */
-}
+export const MemeFlexbox = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
-.meme-container {
+export const MemeContainer = styled.div`
   position: relative;
   width: 80%;
   display: flex;
   justify-content: center;
   margin-bottom: 60px;
   height: auto;
-}
+`;
 
-.meme-text-container {
-  position: absolute;
-}
-
-.meme-flex {
-  display: flex;
-  justify-content: center;
-}
-
-.meme-text {
+export const MemeText = styled.h2`
   position: absolute;
   width: 80%;
   text-align: center;
@@ -93,12 +62,18 @@ main {
   text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
     -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
     2px 2px 5px #000;
-}
 
-.bottom {
-  bottom: 0;
-}
+  &.bottom {
+    bottom: 0;
+  }
 
-.top {
-  top: 0;
-}
+  &.top {
+    top: 0;
+  }
+`;
+
+export const MemeImage = styled.img`
+  max-width: 100%;
+  border-radius: 3px;
+  width: 50vw;
+`;

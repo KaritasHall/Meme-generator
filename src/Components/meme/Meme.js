@@ -1,4 +1,14 @@
 import React, { useCallback, useEffect, useState } from "react";
+import {
+  Form,
+  FormButton,
+  FormInput,
+  MemeContainer,
+  MemeFlexbox,
+  MemeText,
+  MemeImage,
+  Main,
+} from "./styles";
 
 export default function Meme() {
   const [meme, setMeme] = useState({
@@ -50,35 +60,31 @@ export default function Meme() {
   // };
 
   return (
-    <main>
-      <div className="form">
-        <input
+    <Main>
+      <Form>
+        <FormInput
           type="text"
           placeholder="top-text"
-          className="form-input"
           name="topText"
           value={meme.topText}
           onChange={handleChange}
-        ></input>
-        <input
+        ></FormInput>
+        <FormInput
           type="text"
           placeholder="bottom-text"
-          className="form-input"
           name="bottomText"
           value={meme.bottomText}
           onChange={handleChange}
-        ></input>
-        <button className="form-button" onClick={getMemeImage}>
-          Get new meme!
-        </button>
-      </div>
-      <div className="meme-flex">
-        <div className="meme-container">
-          <h2 className="meme-text top">{meme.topText}</h2>
-          <h2 className="meme-text bottom">{meme.bottomText}</h2>
-          <img src={meme.randomImage} className="meme-image" />
-        </div>
-      </div>
-    </main>
+        ></FormInput>
+        <FormButton onClick={getMemeImage}>Get new meme!</FormButton>
+      </Form>
+      <MemeFlexbox>
+        <MemeContainer>
+          <MemeText className="top">{meme.topText}</MemeText>
+          <MemeText className="bottom">{meme.bottomText}</MemeText>
+          <MemeImage src={meme.randomImage} />
+        </MemeContainer>
+      </MemeFlexbox>
+    </Main>
   );
 }
