@@ -1,3 +1,20 @@
+
+# Meme generator with React
+
+The meme generator consists of a basic input form and an image that is randomly grabbed from an API.
+The user can type in their own text for the meme, which is updated and rendered in real time. By using the
+useState hook the "state" of the meme object is re-rendered everytime a change is made to the component - allowing
+us to see input changes immediately.
+
+We have two main components, Head and Meme. They each have their own styles.js where their styled components
+are stored.
+
+
+
+-------------------------
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
